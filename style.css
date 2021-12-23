@@ -1,0 +1,134 @@
+:root{
+   --colorfirstColumn: hsl(31, 77%, 52%);
+   --colorSecondColumn: hsl(184, 100%, 22%);
+   --colorThirdColumn: hsl(179, 100%, 13%);
+   --colorPragraphs: hsl(0, 0%, 100%, 0.75);
+   --colorMain: hsl(0,0%,95%);
+   --fontSizeMain: 15px;
+   --fontSizeTitle: 40px;
+   --fontFamilyMain: 'Lexend Deca';
+   --fontFamilyTitle: 'Big Shoulders Display';
+}
+
+*, ::before, ::after{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.container{
+   width: 920px;
+   height: 500px;
+   border-radius: 8px;
+   display: flex;
+   justify-content: flex-start;
+   overflow: hidden;
+}
+
+.firstColum, .secondColumn, .thirdColumn{
+   width: calc(100% / 3);
+   padding: 49px;
+}
+
+
+.firstColum{
+   background-color: var(--colorfirstColumn);
+}
+
+.secondColumn{
+   background-color: var(--colorSecondColumn);
+}
+
+.thirdColumn{
+   background-color: var(--colorThirdColumn);
+}
+
+h2{
+   font-size: var(--fontSizeTitle);
+   text-transform: uppercase;
+   font-size: var(--fontSizeTitle);
+   font-family: var(--fontFamilyTitle);
+   color: var(--colorMain);
+   margin-top: 35px;
+   margin-bottom: 25px;
+}
+
+p{
+   font-family: var(--fontFamilyMain);
+   font-size: var(--fontSizeMain);
+   color: var(--colorPragraphs);
+   line-height: 25px;
+}
+
+button{
+   width: 146px;
+   height: 48px;
+   margin-top: 83px;
+   background-color: var(--colorMain);
+   border: none;
+   border-radius: 999px;
+   font-size: var(--fontSizeMain);
+   font-family: var(--fontFamilyMain);
+   text-transform: capitalize;
+   cursor: pointer;
+}
+
+button:hover{
+   border: 1px solid var(--colorMain);
+}
+
+.firstColum button{
+   color: var(--colorfirstColumn);
+}
+
+.firstColum button:hover{
+   background-color: var(--colorfirstColumn);
+   color: var(--colorMain);
+}
+
+.secondColumn button{
+   color: var(--colorSecondColumn);
+}
+
+.secondColumn button:hover{
+   background-color: var(--colorSecondColumn);
+   color: var(--colorMain);
+}
+
+.thirdColumn button{
+   color: var(--colorThirdColumn);
+}
+
+.thirdColumn button:hover{
+   background-color: var(--colorThirdColumn);
+   color: var(--colorMain);
+}
+
+@media screen and (max-width:375px) {
+   body{
+      width: 100%;
+   }
+
+   .container{
+      width: 327px;
+      height: 1326px;
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+
+   .firstColum, .secondColumn, .thirdColumn{
+      width: 327px;
+      height: calc(100%/3);
+   }
+
+   button{
+      margin-top: 36px;
+   }
+}
